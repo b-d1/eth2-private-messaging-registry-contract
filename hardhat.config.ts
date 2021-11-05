@@ -19,6 +19,7 @@ dotenvConfig({ path: resolve(__dirname, "./.env") });
 const chainIds = {
   goerli: 5,
   hardhat: 31337,
+  // localhost: 1337,
   kovan: 42,
   mainnet: 1,
   rinkeby: 4,
@@ -58,6 +59,10 @@ const config: HardhatUserConfig = {
     src: "./contracts",
   },
   networks: {
+    localhost: {
+      url: "http://localhost:8545",
+      chainId: chainIds.hardhat,
+    },
     hardhat: {
       accounts: {
         mnemonic,

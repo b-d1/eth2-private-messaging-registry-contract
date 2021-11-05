@@ -10,7 +10,7 @@ interface IRegistryContract {
     /**
     @notice A processed registration event
      */
-    event RegistrationEvent(bytes indexed pubkey, bytes indexed idCommitment, bytes signature);
+    event RegistrationEvent(bytes pubkey, bytes idCommitment, bytes signature);
 
     /**
      * @notice Record the registration related parameters in the blockchain's logs and emit Registration event
